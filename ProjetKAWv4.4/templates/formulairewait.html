@@ -1,0 +1,19 @@
+<html>
+	<body>
+	
+<form action="/kaw_winner" method="post">
+	<input type="hidden" name="username" value= {{user}} />
+	<input type="hidden" name="choix" value= "1" />
+	<h1>Joueur {{ judge }} juge </h1>
+	<text>{{question}}</text>
+	<br>
+	<br>
+	<p> attendre que le juge ai envoyer sa sélection </p>
+	<p> {{selection}} </p>
+	<br>
+	<br>
+	<input type="submit" value="Suivant">
+</form>
+
+	</body>
+</html>

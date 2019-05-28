@@ -1,0 +1,18 @@
+<html>
+<body>
+<form action="/kaw_lobby" method="post">
+  Nom d'utilisateur:<br>
+  <input type="text" name="username">
+  <br><br>
+  <input type="submit" value="Suivant">
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+  <script type="text/javascript" charset="utf-8">
+    var socket = io.connect('http://' + document.domain + ':' + location.port);
+    socket.on('connect', function() {
+        socket.emit('my event', {data: 'I\'m connected!'});
+    });
+</script>
+</form>
+</body>
+</html>
+

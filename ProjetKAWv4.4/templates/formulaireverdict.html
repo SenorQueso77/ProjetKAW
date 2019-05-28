@@ -1,0 +1,23 @@
+<html>
+	<body>
+	
+<form action="/kaw_winner" method="post">
+
+	<input type="hidden" name="username" value= {{user}} />
+	<h1>Joueur {{ judge }} juge </h1>
+	<text>{{question}}</text>
+	<br>
+	<ol>
+			{% for card in selection %}
+			<li>{{ card }}</li>
+			{% endfor %}
+	<ol>
+	Choix :<br>
+	<input type="text" name="choix">
+	<br>
+	<br>
+	<input type="submit" value="Suivant">
+</form>
+
+	</body>
+</html>

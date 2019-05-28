@@ -1,0 +1,27 @@
+import sqlite3
+connection = sqlite3.connect("CAH_db")
+
+cursor = connection.cursor()
+
+cursor.execute ("""
+SELECT Prompt
+FROM prompts_example
+WHERE Id_Prompt = 2""")
+
+result = cursor.fetchone()
+print(result)
+
+
+
+cursor.execute ("""
+SELECT Answer
+FROM answers_example
+WHERE Id_Answer=69""")
+
+result = cursor.fetchone()
+print(result)
+
+
+#connection.commit()
+
+connection.close()

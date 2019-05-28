@@ -1,0 +1,21 @@
+<html>
+	<body>
+<form action="/kaw_tour" method="post">
+	<div>
+	<p>Bienvenue dans la partie: {{user}} </p>
+	<input type="hidden" name="username" value= {{user}} />
+	<p>Joueurs:</p>
+	<ol>
+		{% for player in Plist %}
+		<li>{{ player }}</li>
+		{% endfor %}
+	</ol>
+	<p>
+	<br><br>
+	<input type="submit" value="GO!">
+	</div>
+  <br><br>
+</form>
+	</body>
+</html>
+

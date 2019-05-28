@@ -1,0 +1,25 @@
+<html>
+	<body>
+	
+<form action="/kaw_verdict" method="post">
+	<div>
+	<p>Joueur {{ judge }}  est le Juge </p>
+	<p>{{question}}</p>
+	
+	<p>Main du joueur {{user}}:</p>
+	<input type="hidden" name="username" value= {{user}} />
+	<ol>
+		{% for card in hand %}
+		<li>{{ card }}</li>
+		{% endfor %}
+	</ol>
+	<p> <align=left>Choix (1 - 9)
+	<input type="text" name="choix"></p>
+
+	<br><br>
+	<input type="submit" value="Suivant">
+	</div>
+</form>
+
+	</body>
+</html>
